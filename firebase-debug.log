@@ -1,0 +1,142 @@
+[debug] [2024-04-08T00:53:39.893Z] ----------------------------------------------------------------------
+[debug] [2024-04-08T00:53:39.896Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\BluRay\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init hosting
+[debug] [2024-04-08T00:53:39.896Z] CLI Version:   13.5.1
+[debug] [2024-04-08T00:53:39.896Z] Platform:      win32
+[debug] [2024-04-08T00:53:39.896Z] Node Version:  v20.11.1
+[debug] [2024-04-08T00:53:39.896Z] Time:          Mon Apr 08 2024 02:53:39 GMT+0200 (Eastern European Standard Time)
+[debug] [2024-04-08T00:53:39.897Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-04-08T00:53:39.899Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2024-04-08T00:53:39.947Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-04-08T00:53:39.948Z] > authorizing via signed-in user (mariem.19.1.2002@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  F:\University\Graduation Project\SmartSuper-Market
+
+[debug] [2024-04-08T00:53:40.394Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2024-04-08T00:53:40.395Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2024-04-08T00:56:11.689Z] > refreshing access token with scopes: []
+[debug] [2024-04-08T00:56:11.691Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2024-04-08T00:56:11.691Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-08T00:56:11.914Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2024-04-08T00:56:11.914Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2024-04-08T00:56:11.929Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects pageSize=100
+[debug] [2024-04-08T00:56:12.497Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects 200
+[debug] [2024-04-08T00:56:12.497Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects [omitted]
+[info] i  Using project smart-cart-be4cd (smart-cart) 
+[info] 
+=== Hosting Setup
+[debug] [2024-04-08T00:56:25.871Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/smart-cart-be4cd [none]
+[debug] [2024-04-08T00:56:26.225Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/smart-cart-be4cd 200
+[debug] [2024-04-08T00:56:26.225Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/smart-cart-be4cd {"projectId":"smart-cart-be4cd","projectNumber":"171192483195","displayName":"smart-cart","name":"projects/smart-cart-be4cd","resources":{"hostingSite":"smart-cart-be4cd","storageBucket":"smart-cart-be4cd.appspot.com","locationId":"us-central"},"state":"ACTIVE","etag":"1_ad934bc8-6810-40b3-8b56-2dcfef288754"}
+[info] 
+[info] Your public directory is the folder (relative to your project directory) that
+[info] will contain Hosting assets to be uploaded with firebase deploy. If you
+[info] have a build process for your assets, use your build's output directory.
+[info] 
+[debug] [2024-04-08T00:59:46.354Z] >>> [apiv2][query] GET https://www.gstatic.com/firebasejs/releases.json [none]
+[debug] [2024-04-08T00:59:46.538Z] <<< [apiv2][status] GET https://www.gstatic.com/firebasejs/releases.json 200
+[debug] [2024-04-08T00:59:46.539Z] <<< [apiv2][body] GET https://www.gstatic.com/firebasejs/releases.json {"current":{"version":"10.10.0","browserURL":"https://www.gstatic.com/firebasejs/10.10.0/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/10.10.0/firebase.tgz"},"live":{"version":"10.10","browserURL":"https://www.gstatic.com/firebasejs/live/10.10/firebase.js","packageURL":"https://www.gstatic.com/firebasejs/live/10.10/firebase.tgz"},"components":{"analytics":"https://www.gstatic.com/firebasejs/10.10.0/firebase-analytics.js","app":"https://www.gstatic.com/firebasejs/10.10.0/firebase-app.js","app-check":"https://www.gstatic.com/firebasejs/10.10.0/firebase-app-check.js","auth":"https://www.gstatic.com/firebasejs/10.10.0/firebase-auth.js","auth/cordova":"https://www.gstatic.com/firebasejs/10.10.0/firebase-auth/cordova.js","auth/web-extension":"https://www.gstatic.com/firebasejs/10.10.0/firebase-auth/web-extension.js","functions":"https://www.gstatic.com/firebasejs/10.10.0/firebase-functions.js","firestore":"https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.js","firestore/lite":"https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore/lite.js","installations":"https://www.gstatic.com/firebasejs/10.10.0/firebase-installations.js","storage":"https://www.gstatic.com/firebasejs/10.10.0/firebase-storage.js","performance":"https://www.gstatic.com/firebasejs/10.10.0/firebase-performance.js","remote-config":"https://www.gstatic.com/firebasejs/10.10.0/firebase-remote-config.js","messaging":"https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging.js","messaging/sw":"https://www.gstatic.com/firebasejs/10.10.0/firebase-messaging/sw.js","database":"https://www.gstatic.com/firebasejs/10.10.0/firebase-database.js","firestore.memory":"https://www.gstatic.com/firebasejs/10.10.0/firebase-firestore.memory.js"}}
+[info] +  Wrote public/index.html 
+[info] 
+[info] i  Detected a .git folder at F:\University\Graduation Project\SmartSuper-Market 
+[info] i  Authorizing with GitHub to upload your service account to a GitHub repository's secrets store. 
+[info] 
+[info] Visit this URL on this device to log in:
+[info] https://github.com/login/oauth/authorize?client_id=89cf50f02ac6aaed3484&state=740157902&redirect_uri=http%3A%2F%2Flocalhost%3A9005&scope=read%3Auser%20repo%20public_repo
+[info] 
+[info] Waiting for authentication...
+[debug] [2024-04-08T01:00:44.755Z] >>> [apiv2][query] POST https://github.com/login/oauth/access_token [none]
+[debug] [2024-04-08T01:00:44.755Z] >>> [apiv2][body] POST https://github.com/login/oauth/access_token [stream]
+[debug] [2024-04-08T01:00:45.703Z] <<< [apiv2][status] POST https://github.com/login/oauth/access_token 200
+[debug] [2024-04-08T01:00:45.704Z] <<< [apiv2][body] POST https://github.com/login/oauth/access_token {"access_token":"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","token_type":"bearer","scope":"read:user,repo"}
+[debug] [2024-04-08T01:00:45.724Z] >>> [apiv2][query] GET https://api.github.com/user [none]
+[debug] [2024-04-08T01:00:46.077Z] <<< [apiv2][status] GET https://api.github.com/user 200
+[debug] [2024-04-08T01:00:46.078Z] <<< [apiv2][body] GET https://api.github.com/user {"login":"Mariem2Mostafa","id":117760276,"node_id":"U_kgDOBwThFA","avatar_url":"https://avatars.githubusercontent.com/u/117760276?v=4","gravatar_id":"","url":"https://api.github.com/users/Mariem2Mostafa","html_url":"https://github.com/Mariem2Mostafa","followers_url":"https://api.github.com/users/Mariem2Mostafa/followers","following_url":"https://api.github.com/users/Mariem2Mostafa/following{/other_user}","gists_url":"https://api.github.com/users/Mariem2Mostafa/gists{/gist_id}","starred_url":"https://api.github.com/users/Mariem2Mostafa/starred{/owner}{/repo}","subscriptions_url":"https://api.github.com/users/Mariem2Mostafa/subscriptions","organizations_url":"https://api.github.com/users/Mariem2Mostafa/orgs","repos_url":"https://api.github.com/users/Mariem2Mostafa/repos","events_url":"https://api.github.com/users/Mariem2Mostafa/events{/privacy}","received_events_url":"https://api.github.com/users/Mariem2Mostafa/received_events","type":"User","site_admin":false,"name":"Mariem Mostafa","company":null,"blog":"","location":null,"email":null,"hireable":null,"bio":"AI_engineer","twitter_username":null,"public_repos":0,"public_gists":0,"followers":0,"following":0,"created_at":"2022-11-08T16:37:38Z","updated_at":"2024-04-08T01:00:07Z","private_gists":0,"total_private_repos":0,"owned_private_repos":0,"disk_usage":0,"collaborators":0,"two_factor_authentication":false,"plan":{"name":"free","space":976562499,"collaborators":0,"private_repos":10000}}
+[info] 
+[info] +  Success! Logged into GitHub as Mariem2Mostafa 
+[info] 
+[debug] [2024-04-08T01:01:49.138Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:01:50.002Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 404
+[debug] [2024-04-08T01:01:50.003Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Not Found","documentation_url":"https://docs.github.com/rest"}
+[info] 
+[info] 
+[error] !  The provided authorization cannot be used with this repository. If this repository is in an organization, did you remember to grant access? 
+[info] 
+[info] i  Action required: Visit this URL to ensure access has been granted to the appropriate organization(s) for the Firebase CLI GitHub OAuth App: 
+[info] https://github.com/settings/connections/applications/89cf50f02ac6aaed3484
+[info] 
+[debug] [2024-04-08T01:03:53.935Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:03:54.254Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:03:54.255Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:04:02.110Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:04:02.957Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:04:02.957Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:05:46.420Z] >>> [apiv2][query] GET https://api.github.com/repos/Applications/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:05:46.739Z] <<< [apiv2][status] GET https://api.github.com/repos/Applications/actions/secrets/public-key 401
+[debug] [2024-04-08T01:05:46.739Z] <<< [apiv2][body] GET https://api.github.com/repos/Applications/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:05:57.261Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:05:57.446Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:05:57.613Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:05:57.785Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:05:57.804Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:05:57.804Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:05:57.960Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:05:58.137Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:05:58.138Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:05:58.139Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:05:58.139Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:05:58.475Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:05:58.476Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:05:58.608Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:05:58.608Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:06:59.910Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:00.074Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:00.222Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:00.527Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:00.527Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:00.782Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:00.782Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:00.900Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:00.900Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:01.957Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:02.336Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:02.336Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:02.413Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:02.759Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:02.759Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:03.333Z] >>> [apiv2][query] GET https://api.github.com/repos//actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:03.678Z] <<< [apiv2][status] GET https://api.github.com/repos//actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:03.678Z] <<< [apiv2][body] GET https://api.github.com/repos//actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:20.611Z] >>> [apiv2][query] GET https://api.github.com/repos/my Project/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:20.924Z] <<< [apiv2][status] GET https://api.github.com/repos/my Project/actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:20.924Z] <<< [apiv2][body] GET https://api.github.com/repos/my Project/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:07:24.046Z] >>> [apiv2][query] GET https://api.github.com/repos/my Project/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:07:24.219Z] <<< [apiv2][status] GET https://api.github.com/repos/my Project/actions/secrets/public-key 401
+[debug] [2024-04-08T01:07:24.219Z] <<< [apiv2][body] GET https://api.github.com/repos/my Project/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:09:17.169Z] >>> [apiv2][query] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:09:18.050Z] <<< [apiv2][status] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key 401
+[debug] [2024-04-08T01:09:18.050Z] <<< [apiv2][body] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:09:28.759Z] >>> [apiv2][query] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:09:29.079Z] <<< [apiv2][status] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key 401
+[debug] [2024-04-08T01:09:29.079Z] <<< [apiv2][body] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:09:30.240Z] >>> [apiv2][query] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:09:30.417Z] <<< [apiv2][status] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key 401
+[debug] [2024-04-08T01:09:30.418Z] <<< [apiv2][body] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}
+[debug] [2024-04-08T01:09:30.994Z] >>> [apiv2][query] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key type=owner
+[debug] [2024-04-08T01:09:31.161Z] <<< [apiv2][status] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key 401
+[debug] [2024-04-08T01:09:31.161Z] <<< [apiv2][body] GET https://api.github.com/repos/git clone https://github.com/username/repository.git/actions/secrets/public-key {"message":"Bad credentials","documentation_url":"https://docs.github.com/rest"}

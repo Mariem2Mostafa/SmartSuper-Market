@@ -1,0 +1,27 @@
+{
+  "extends": [
+    "development"
+  ],
+  "hints": {
+    "compat-api/css": [
+      "default",
+      {
+        "ignore": [
+          "backdrop-filter",
+          "position: sticky"
+        ]
+      }
+    ],
+    "apple-touch-icons": "off",
+    "manifest-file-extension": "off",
+    "compat-api/html": [
+      "default",
+      {
+        "ignore": [
+          "link[referrerpolicy]",
+          "meta[name=theme-color]"
+        ]
+      }
+    ]
+  }
+}
