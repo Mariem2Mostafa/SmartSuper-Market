@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/SmartSuper-Market/static/css/main.088cdead.css",
+    "main.js": "/SmartSuper-Market/static/js/main.ab49b030.js",
+    "index.html": "/SmartSuper-Market/index.html",
+    "main.088cdead.css.map": "/SmartSuper-Market/static/css/main.088cdead.css.map",
+    "main.ab49b030.js.map": "/SmartSuper-Market/static/js/main.ab49b030.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.088cdead.css",
+    "static/js/main.ab49b030.js"
+  ]
+}
