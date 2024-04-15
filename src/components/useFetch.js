@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from './Config/firebase'; // assuming you have initialized Firebase in a separate file
+import { db } from './Config/firebase'; 
 
 const useFetch = (collectionName) => {
     const [productsList, setProductsList] = useState([]);

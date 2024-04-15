@@ -34,22 +34,3 @@ const Home = () => {
 
 export default Home;
 
-// const { error, isPending, mydata: products } = useFetch('Products')
-
-    // return (
-        
-    //     <div className="home">
-    //     { error && <div>{ error }</div> }
-    //     { isPending && <div>Loading...</div> }
-    //         {products && (
-    //             <div>
-    //         <div className="text">Products</div>
-    //             <div className="products-box">
-    //                     <ProductsList products={products} />
-    //                 </div>
-    //                 </div>
-    //         )}
-            
-    //     </div>
-        
-    // );
