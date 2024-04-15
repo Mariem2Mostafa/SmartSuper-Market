@@ -21,7 +21,7 @@ const Login = () => {
             const snapshot = await getDocs(q);
             if (!snapshot.empty) {
                 console.log('Login is Done..');
-                history.push('/Home');
+                history.push('/SmartSuper-Market/Home');
             }
             else {
                 setUsername('');
