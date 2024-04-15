@@ -50,7 +50,6 @@ const AddProduct = () => {
         () => {
             getDownloadURL(uploadTask.snapshot.ref)
                 .then(async (imgeURL) => {
-                    console.log(imgeURL);
                     const productDocRef = doc(db, 'Products', uniqueProductID);
                     await setDoc(productDocRef, {
                         product_ID: uniqueProductID,

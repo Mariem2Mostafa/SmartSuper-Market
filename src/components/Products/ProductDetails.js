@@ -14,10 +14,10 @@ const ProductDetails = () => {
 
 
     const handleDelete = async (id) => {
-    try {
+        try {
+        
         const deleteVal = doc(db, "Products", id);
         await deleteDoc(deleteVal);
-        alert("are you sure")
         history.push("/Home");
     } catch (error) {
         console.error("Error deleting product:", error);
@@ -45,7 +45,12 @@ const ProductDetails = () => {
                         <span className="quantity">Quantity : {product.quantity}</span> <br /><br />
                         <Link className='linkUpdate' to={`/update/${product.id}/${product.product_name}`}
                             onClick={() => handlePass(product.id)}>Update</Link>
-                        <button onClick={() => handleDelete(product.id)}>Delete</button>
+                        <button onClick={() => { 
+                            const confirmBox = window.confirm("Are you sure you want to delete this product?")
+                            if (confirmBox === true) {
+                                handleDelete(product.id)
+                            }
+                        }}>Delete</button>
                         
                     </div>
                 </article>
