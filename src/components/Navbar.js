@@ -10,7 +10,7 @@ const Navbar = () => {
     const history = useHistory();
     const handleSignOut = () => {
 
-        history.replace('/SmartSuper-Market/'); 
+        history.replace('/'); 
     };
 
     return (
