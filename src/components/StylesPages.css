@@ -306,7 +306,6 @@ nav h1 {
 }
 
 .update button {
-    width: 100%;
     background: #f13535;
     color: #fff;
     border: none;
@@ -318,6 +317,7 @@ nav h1 {
     cursor: pointer;
     display: inline-block;
     margin-top: 10px;
+    margin-right: 50px;
 
 }
 
