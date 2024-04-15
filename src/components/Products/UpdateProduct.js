@@ -45,7 +45,7 @@ const UpdateProduct = () => {
                     quantity: Number(quantity),
                 });
                 console.log("Product updated successfully");
-                history.push(`/Home/${product.id}/${product.product_name}`);
+                history.push(`/SmartSuper-Market/Home/${product.id}/${product.product_name}`);
             } catch (err) {
                 console.error(err);
                 setError("Failed to update product.");

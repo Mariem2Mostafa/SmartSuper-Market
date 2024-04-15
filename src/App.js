@@ -21,19 +21,19 @@ const App = () => {
           <Route>
             <Navbar />
             <Switch>
-              <Route exact path="/Home">
+              <Route exact path="/SmartSuper-Market/Home">
                 <Home/>
               </Route>
-              <Route exact path="/AddProduct">
+              <Route exact path="/SmartSuper-Market/AddProduct">
                 <AddProduct/>
               </Route>
-              <Route exact path="/Home/:id/:product_name">
+              <Route exact path="/SmartSuper-Market/Home/:id/:product_name">
               <ProductDetails/>
               </Route>
-              <Route exact path="/update/:id/:product_name">
+              <Route exact path="/SmartSuper-Market/update/:id/:product_name">
                 <UpdateProduct/>
               </Route>
-              <Route exact path="/History">
+              <Route exact path="/SmartSuper-Market/History">
                 <History/>
               </Route>
               <Route exact path="*">

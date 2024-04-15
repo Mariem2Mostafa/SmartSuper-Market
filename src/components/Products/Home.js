@@ -16,7 +16,7 @@ const Home = () => {
                 {products.map((product) => (
                 
                 <div className="Product" key={product.id}> 
-                    <Link className="product-view" to={`/Home/${product.id}/${product.product_name}`}>
+                    <Link className="product-view" to={`/SmartSuper-Market/Home/${product.id}/${product.product_name}`}>
                     <div className="product-img">
                     <img src={product.url} alt="product-img" />
                     </div>

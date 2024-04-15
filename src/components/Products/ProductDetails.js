@@ -18,7 +18,7 @@ const ProductDetails = () => {
         
         const deleteVal = doc(db, "Products", id);
         await deleteDoc(deleteVal);
-        history.push("/Home");
+        history.push("/SmartSuper-Market/Home");
     } catch (error) {
         console.error("Error deleting product:", error);
     }
@@ -43,7 +43,7 @@ const ProductDetails = () => {
                         <span className="description">Description : {product.description}</span>
                         <h2 className="price">{product.price} EGP</h2>
                         <span className="quantity">Quantity : {product.quantity}</span> <br /><br />
-                        <Link className='linkUpdate' to={`/update/${product.id}/${product.product_name}`}
+                        <Link className='linkUpdate' to={`/SmartSuper-Market/update/${product.id}/${product.product_name}`}
                             onClick={() => handlePass(product.id)}>Update</Link>
                         <button onClick={() => { 
                             const confirmBox = window.confirm("Are you sure you want to delete this product?")

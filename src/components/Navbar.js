@@ -23,9 +23,9 @@ const Navbar = () => {
             </div>
             <div className="links">
                 <ul className={menuOpen ? "open" : ""}>
-                    <li><NavLink to="/Home">Home</NavLink></li>
-                    <li><NavLink to="/AddProduct">Add Product</NavLink></li>
-                    <li><NavLink to="/History">History</NavLink></li>
+                    <li><NavLink to="/SmartSuper-Market/Home">Home</NavLink></li>
+                    <li><NavLink to="/SmartSuper-Market/AddProduct">Add Product</NavLink></li>
+                    <li><NavLink to="/SmartSuper-Market/History">History</NavLink></li>
                     <li><button onClick={handleSignOut}>Sign Out</button></li>
                 </ul>
             </div>
