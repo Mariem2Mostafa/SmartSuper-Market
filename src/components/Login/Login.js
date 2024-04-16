@@ -12,7 +12,8 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [errorMsg,setErrorMsg] = useState('')
 
-    const handleLogin = async () => {        
+    const handleLogin = async (e) => { 
+        e.preventDefault();
         const dbRef = collection(db, 'managers_Accounts');
         const q = query(dbRef, where('userName', '==', username),
             where('email', '==', email),
@@ -33,31 +34,28 @@ const Login = () => {
             console.error('Error logging in:', error);
         }
     };
-    const handleFormSubmit = (e) => {
-        e.preventDefault();
-        handleLogin();
-    };
+    
 
     return ( 
         <div className="contant">
             <div className="login">
-            <form  onSubmit={handleFormSubmit}>
+            <form  onSubmit={handleLogin}>
             <h1>Login</h1>
                     <div className="inbox-input">
                         <input type="text" id="username" name="username"  required onChange={(e) => setUsername(e.target.value)} />
                         <label htmlFor="username">Username</label>
                         
-            </div>
+                    </div>
                     <div className="inbox-input">
                         
                         <input type="email" id="email" name="email" required onChange={(e) => setEmail(e.target.value)} />
                         <label htmlFor="email">Email</label>
-            </div>
+                    </div>
                     <div className="inbox-input">
                         
                         <input type="password" id="password" name="password" required onChange={(e) => setPassword(e.target.value)} />
                         <label htmlFor="password">Password</label>
-            </div>
+                    </div>
                     <button type="submit">Login</button>
                     {errorMsg &&<div className="error">{errorMsg}</div>}
                 </form>

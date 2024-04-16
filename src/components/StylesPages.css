@@ -323,6 +323,25 @@ nav h1 {
 
 
 
+/*History*/
+.history {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.history input {
+    width: 700px;
+    padding: 15px 30px 15px 30px;
+    border-radius: 30px;
+    font-size: 1em;
+    margin-bottom: 50px;
+    margin-top: 15px;
+
+}  
+
 
 
 

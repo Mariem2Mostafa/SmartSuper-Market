@@ -1,9 +1,20 @@
 import React from 'react'
+import './StylesPages.css'
 
 const History = () => {
     return (
-        <div className="home">
-            History
+        
+        <div className="history">
+            <div>
+                <div className="inputSearch">
+                <input type='text' placeholder='Search'></input>
+            </div>
+
+                <div className="data">
+                </div>
+            </div>
+            
+            
     </div>
     )
 }
