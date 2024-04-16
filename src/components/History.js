@@ -1,13 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './StylesPages.css'
+import { IoSearch } from "react-icons/io5";
+
 
 const History = () => {
+    const [search, setSearch] = useState("");
+
+    const handleSearch = () => {
+        console.log("Search..")
+    }
     return (
         
         <div className="history">
             <div>
                 <div className="inputSearch">
-                <input type='text' placeholder='Search'></input>
+                    <form onSubmit={handleSearch}>
+                        <input type='text' placeholder='Search'
+                            onChange={(e) => setSearch(e.target.value)}></input>
+                        <button><IoSearch/></button>
+                    </form>
+                
             </div>
 
                 <div className="data">
