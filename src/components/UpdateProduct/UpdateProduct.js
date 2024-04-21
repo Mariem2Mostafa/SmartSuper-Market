@@ -1,16 +1,16 @@
 import React  from 'react';
-import '../StylesPages.css'
+import './UpdateStyles.css'
 import useFetch from '../useFetch';
 import { useState } from 'react';
 import { useParams ,useHistory } from 'react-router-dom';
 import { updateDoc ,doc} from 'firebase/firestore';
-import { db} from '../Config/firebase';
+import { db} from '../../Config/firebase';
 import { useEffect } from 'react';
 
 const UpdateProduct = () => {
     const history =useHistory()
     const { id } = useParams();
-    const {productsList: products } = useFetch('Products');
+    const {data: products } = useFetch('Products');
     const product = products && products.find(product => product.id === id);
     
 
@@ -45,14 +45,14 @@ const UpdateProduct = () => {
                     quantity: Number(quantity),
                 });
                 console.log("Product updated successfully");
-                history.push(`/SmartSuper-Market/Home/${product.id}/${product.product_name}`);
+                history.push(`/SmartSuper-Market/Home/${product.id}/`);
             } catch (err) {
                 console.error(err);
                 setError("Failed to update product.");
             }
     }
     const handleCancel = async (e) => {
-        history.goBack();
+        history.push(`/SmartSuper-Market/Home/${product.id}/`);
     }
     
 
@@ -62,7 +62,7 @@ const UpdateProduct = () => {
         <div className="update">
             <h2>Update Product</h2>
             
-            <form onSubmit={handleUpdate}>
+            <form >
                 <label>Product Name : </label>
                 <input
                     type="text"
@@ -92,9 +92,8 @@ const UpdateProduct = () => {
                     value={quantity}
                     onChange={(e) => setQuantity(e.target.value)}
                 />
-                
+                {<button onClick={handleUpdate}>Update</button>}
                 {<button onClick={handleCancel}>Cancel</button>}
-                {<button>Update</button>}
             </form>
             {error && <span>{error}</span>}
         </div>

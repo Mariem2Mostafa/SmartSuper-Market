@@ -1,0 +1,45 @@
+/* AddProduct */
+.create {
+    max-width: 900px;
+    margin: 75px auto;
+    text-align: center;
+    border: 2px solid rgba(102, 101, 101, 0.2);
+    padding: 20px 45px 20px 20px;
+}
+
+.create h2 {
+    font-size: 25px;
+    color: #000000;
+    margin-bottom: 30px;
+}
+
+.create label {
+    text-align: left;
+    display: block;
+    font-size: 20px;
+}
+
+.create input {
+    width: 100%;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+}
+
+.create button {
+    width: 100%;
+    background: #f13535;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 8px;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 17px;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+
+}

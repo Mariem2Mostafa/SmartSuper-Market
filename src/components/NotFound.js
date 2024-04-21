@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import './NotFoStyles.css'
 const NotFound = () => {
     return (  
         <div className="not-found">

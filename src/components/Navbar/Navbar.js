@@ -1,5 +1,4 @@
-import './StylesPages.css';
-import '../styles.css';
+import './NavStyles.css';
 import { NavLink, useHistory } from 'react-router-dom';
 import { useState } from 'react';
 

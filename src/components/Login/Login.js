@@ -1,7 +1,7 @@
 import React from "react";
 import './LoginStyle.css'
 import { useState } from "react";
-import { db } from "../Config/firebase";
+import { db } from "../../Config/firebase";
 import { collection, getDocs, where, query } from 'firebase/firestore';
 import { useHistory } from 'react-router-dom';
 
