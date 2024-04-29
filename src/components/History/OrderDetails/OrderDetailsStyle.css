@@ -1,0 +1,91 @@
+/* OrderDetails.css */
+
+.viewOrder,
+.overlay {
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+}
+
+.overlay {
+    background: rgba(49, 49, 49, 0.8);
+}
+
+.view-Container {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 2;
+    background: #f1f1f1;
+    padding: 2px 5px;
+    border-radius: 10px;
+    max-width: 900;
+    min-width: 600;
+}
+
+
+.body {
+    padding: 0 30px 10px 30px;
+}
+
+.body h1 {
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+
+.orderIdContainer ,.dateContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.items table {
+    margin-top: 10px;
+    width: 100%;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.items th,
+.items td {
+    text-align: right;
+    padding: 8px 10px;
+    border-bottom: 1px solid #ddd;
+    text-align: left;
+}
+
+
+
+
+
+
+
+.closeButt {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.closeButt button {
+    background-color: transparent;
+    color: #8a35f1;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+}
+.closeButt button:hover {
+    color: #6b247c;
+}
+
+.totalPrice {
+    text-align: right;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 20px;
+}

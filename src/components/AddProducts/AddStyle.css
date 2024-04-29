@@ -8,9 +8,13 @@
 }
 
 .create h2 {
-    font-size: 25px;
-    color: #000000;
+    text-align: center;
+    text-shadow: 2px 2px 5px #898686;
+    color: #8a35f1;
+    font-size: 50px;
+    font-weight: bold;
     margin-bottom: 30px;
+    
 }
 
 .create label {
@@ -30,7 +34,7 @@
 
 .create button {
     width: 100%;
-    background: #f13535;
+    background: #8a35f1;
     color: #fff;
     border: none;
     outline: none;
@@ -42,4 +46,8 @@
     display: inline-block;
     margin-top: 10px;
 
+}
+
+.create button:hover {
+    background-color: #6b247c;
 }

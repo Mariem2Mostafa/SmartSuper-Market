@@ -1,6 +1,6 @@
 import './AddStyle.css'
 import React, { useState } from "react";
-import { storage, db } from "../../Config/firebase";
+import { storage, db } from "../../firebase";
 import {doc, setDoc} from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 

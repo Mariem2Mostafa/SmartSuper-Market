@@ -4,7 +4,7 @@ import useFetch from '../useFetch';
 import { useState } from 'react';
 import { useParams ,useHistory } from 'react-router-dom';
 import { updateDoc ,doc} from 'firebase/firestore';
-import { db} from '../../Config/firebase';
+import { db} from '../../firebase';
 import { useEffect } from 'react';
 
 const UpdateProduct = () => {

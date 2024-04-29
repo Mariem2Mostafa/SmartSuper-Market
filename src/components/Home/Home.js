@@ -5,8 +5,6 @@ import { IoSearch } from "react-icons/io5";
 import { useState } from 'react';
 import { useEffect } from 'react';
 
-
-
 const Home = () => {
     const { error, isPending, data: products } = useFetch('Products');
     const [search, setSearch] = useState("");
@@ -27,35 +25,47 @@ const Home = () => {
         <div className="home">
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
-            <div className="text">Products</div>
-            <div className="search">
-                <form onSubmit={(e) => e.preventDefault()}>
-                    <input
-                        type="text"
-                        placeholder="Search"
-                        value={search}
-                        onChange={handleSearch}
-                    />
-                    <button><IoSearch/></button>
-                </form>
-            </div>
-            <div className="products-container">
-                {filteredProducts.map((product) => (
-                    <div className="Product" key={product.id}>
-                        <Link className="product-view" to={`/SmartSuper-Market/Home/${product.id}/`}>
-                            <div className="product-img">
-                                <img src={product.url} alt="product-img" />
-                            </div>
-                            <h1 className="product-name">{product.product_name}</h1>
-                            <span className="product-price">{product.price} EGP</span>
-                        </Link>
-                    </div>
-                ))}
-            </div>
+            <section className="welcomimg" id='welcome'>
+                <div className='caption'>
+                    <h1>The Produce is fresh,</h1> 
+                    <h1>chemical free</h1>
+                    <h1>&</h1>
+                    <h1>of high quality</h1>
+                </div>
+            </section>
+
+            <section id='products'>
+                <div className="text">Products</div>
+                <div className="search">
+                    <form onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            value={search}
+                            onChange={handleSearch}
+                        />
+                        <button><IoSearch/></button>
+                    </form>
+                </div>
+                <div className="products-container">
+                    {filteredProducts.map((product) => (
+                        <div className="Product" key={product.id}>
+                            <Link className="product-view" to={`/SmartSuper-Market/Home/${product.id}/`}>
+                                <div className="product-img">
+                                    <img src={product.url} alt="product-img" />
+                                </div>
+                                <h1 className="product-name">{product.product_name}</h1>
+                                <span className="product-price">{product.price} EGP</span>
+                            </Link>
+                        </div>
+                    ))}
+                </div>
+            </section>
         </div>
     );
 };
 
-
 export default Home;
+
+
 

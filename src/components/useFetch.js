@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { collection, getDocs } from 'firebase/firestore';
-import { db } from '../Config/firebase'; 
+import { db } from '../firebase'; 
 
 const useFetch = (collectionName) => {
     const [data, setData] = useState([]);
@@ -20,6 +20,7 @@ const useFetch = (collectionName) => {
                 setLoading(false);
                 setError(error.message);
                 console.error(error);
+                setData([]); // Reset data to an empty array on error
             }
         };
 
@@ -30,3 +31,7 @@ const useFetch = (collectionName) => {
 };
 
 export default useFetch;
+
+
+
+

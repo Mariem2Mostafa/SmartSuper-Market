@@ -86,9 +86,8 @@
     text-decoration: none;
 }
 .error {
-    margin-top: 7px;
-    color: rgb(241, 9, 9);
-    
+    color: red;
+    margin-top: 10px;
 }
 
 @media(max-width: 400px) {

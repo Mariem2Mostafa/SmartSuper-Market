@@ -1,7 +1,7 @@
 import './ProDetailsStyles.css'
 import { Link, useParams } from "react-router-dom";
 import useFetch from "../useFetch";
-import { db } from "../../Config/firebase";
+import { db } from "../../firebase";
 import { deleteDoc, doc } from 'firebase/firestore';
 import { useHistory} from "react-router-dom";
 

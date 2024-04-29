@@ -10,6 +10,7 @@ import NotFound from './components/NotFound'
 import ProductDetails from './components/productDetails/ProductDetails';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
 
+
 const App = () => {
   return ( 
     <Router>
@@ -36,6 +37,8 @@ const App = () => {
               <Route exact path="/SmartSuper-Market/History">
                 <History/>
               </Route>
+              
+              
               <Route exact path="*">
                 <NotFound/>
               </Route>

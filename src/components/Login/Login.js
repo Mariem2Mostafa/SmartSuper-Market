@@ -1,7 +1,7 @@
 import React from "react";
 import './LoginStyle.css'
 import { useState } from "react";
-import { db } from "../../Config/firebase";
+import { db } from "../../firebase";
 import { collection, getDocs, where, query } from 'firebase/firestore';
 import { useHistory } from 'react-router-dom';
 
@@ -25,9 +25,6 @@ const Login = () => {
                 history.push('/SmartSuper-Market/Home');
             }
             else {
-                setUsername('');
-                setPassword('');
-                setEmail('')
                 setErrorMsg('Check Your Username or Password.');
             }
         } catch (error) {

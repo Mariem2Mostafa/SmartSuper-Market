@@ -1,60 +1,109 @@
 
 
 /*History*/
-.history {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 50px;
+.orders{
+        max-width: 900px;
+        padding: 20px 45px 20px 20px;
+        margin: auto;       
 }
-
-.history form {
-    border-radius: 25px;
-    position: relative;
-}
-.history input {
-    width: 700px;
-    padding: 15px 30px 15px 30px;
-    border-radius: 30px;
-    font-size: 1em;
-    margin-bottom: 50px;
-    margin-top: 15px;
-    display: block;
-    font-size: 25px;
-}  
-.history form input:focus {
-    outline: none;
-    
-}
-.history form button {
-    position: absolute;
-        top: 0;
-        right: 5px;
-        width: 50px;
-        height: 100%;
-        border-radius: 50%;
-        cursor: pointer;
-        border: none;
-        font-size: 25px;
-        background: none;
-}
-
-.Table table {
-    font-family: arial, sans-serif;
-    border-collapse: collapse;
-    width: 100%;
+.title {
     text-align: center;
-    }
-.Table td,th {
-    
-    border: 1px solid #dddddd;
-    text-align: left;
+    padding: 10px 5px 10px 5px;
+}
+
+.title h1 {
+    text-shadow: 2px 2px 5px #898686;
+    color: #8a35f1;
+    font-size: 50px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+
+.inputSearch {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 20px 0;
+
+}
+
+.inputSearch input[type='text'] {
     padding: 8px;
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 5px;
+}
+
+.inputSearch form button {
+    padding: 8px 15px;
+    background-color: #8a35f1;
+    border: none;
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.clear button{
+        background: #8a35f1;
+        color: #fff;
+        border: none;
+        outline: none;
+        padding: 8px;
+        text-align: center;
+        border-radius: 8px;
+        font-size: 17px;
+        cursor: pointer;
+}
+
+.inputSearch button:hover {
+    background-color: #6b247c;
 }
 
 
 
+.table{
+    /* border-collapse: collapse; */
+    margin: auto;
+    width: 100%;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    max-width: 900px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15) ;
+}
+
+.table thead tr {
+    background-color: #8a35f1;
+    color: #ffffff;
+    text-align: left;
+}
+
+.table th,
+.table td {
+    padding: 12px 15px;
+}
+
+.table tbody tr{
+    border-bottom: 1px solid #dddddd;
+}
+
+.table tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+.table tbody tr:nth-last-of-type {
+    border-bottom: 2px solid #8a35f1;
+}
+
+.table button {
+        border: none;
+        background: none;
+        cursor: pointer;
+        padding: 10px 15px;
+        font-size: 20px;
+        }
+
+.table .delete {
+    color: darkred;
+}
 
 
 
