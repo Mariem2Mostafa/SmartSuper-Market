@@ -18,10 +18,11 @@ const History = () => {
     const [filteredOrders, setFilteredOrders] = useState([]);
 
     
+    
 
     useEffect(() => {
         setFilteredOrders(data.filter((val) =>
-            val.orderId.toLowerCase().includes(search.toLowerCase())
+            val.id.toLowerCase().includes(search.toLowerCase())
         ));
     }, [search, data]);
 
@@ -32,7 +33,7 @@ const History = () => {
         setSearch(e.target.value);
     };
 
-    
+
 
     const handleDelete = async (id) => {
         try {
@@ -63,13 +64,17 @@ const History = () => {
         <div className="history">
             {error && <div>{error}</div>}
             {isPending && <div>Loading...</div>}
-            <div className='orders'  style={{marginTop:"75px"}}>
+            <div className='orders'  style={{marginTop:"75px",marginBottom:"75px"}}>
                 <div className="title"><h1>Orders List</h1></div>
                 <div className="inputSearch">
                     <div className='formSearch'> 
-                        <form onSubmit={handleSearch}>
-                        <input type='text' placeholder='Search'
-                            onChange={(e) => setSearch(e.target.value)}></input>
+                        <form onSubmit={(e) => e.preventDefault()}>
+                        <input
+                            type="text"
+                            placeholder="Search"
+                            value={search}
+                            onChange={handleSearch}
+                        />
                         <button type='submit'><IoSearch/></button>
                     </form>
                     </div>
@@ -77,10 +82,7 @@ const History = () => {
                     <div className="clear">
                         <button>clear Data</button>
                     </div>
-                    
-                
                 </div>
-                <div className="dataTable">
                     <table className='table'>
                     <thead>
                             <tr>
@@ -107,7 +109,6 @@ const History = () => {
                     </tbody>
                 
                 </table>
-                </div>
             </div>
             
             

@@ -4,7 +4,7 @@ import './OrderDetailsStyle.css';
 import { MdDelete } from "react-icons/md";
 import { db } from "../../../firebase";
 import { updateDoc, doc } from 'firebase/firestore';
-import Swal from 'sweetalert2';
+import Swal from 'sweetalert2'; //confirmBox
 
 const OrderDetails = ({ orderId, setOrderDetailsId }) => {
     const {data: orders } = useFetch('history');

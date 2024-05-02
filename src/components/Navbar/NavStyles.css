@@ -5,7 +5,10 @@
     color: #8a35f1;
     font-weight: bold;
 }
-
+.homeF a:hover,
+.homeF a.active {
+    color: #8a35f1;
+}
 nav {
     display: flex;
     align-items: center;
@@ -14,13 +17,12 @@ nav {
     position: sticky;
     top: 0;
     background-color: #ffff;
-
 }
 
 .log {
     display: flex;
     align-items: center;
-    margin-left: 30px;
+    margin-left: 50px;
 }
 
 .log img {
@@ -39,6 +41,17 @@ nav {
     font-weight: bold;
 }
 
+.homeF a{
+    text-decoration: none;
+    color: #000;
+    font-size: larger;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+.homeF a:hover,
+.homeF a.active {
+    color: #8a35f1;
+}
 .links ul {
     display: flex;
     margin: 0 5px;

@@ -17,7 +17,7 @@
 
 .view-Container {
     position: absolute;
-    top: 40%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     line-height: 2;
@@ -37,6 +37,9 @@
     text-align: center;
     font-weight: bold;
     margin-bottom: 20px;
+    text-shadow: 2px 2px 5px #898686;
+    color: #8a35f1;
+    font-size: 30px;
 }
 
 

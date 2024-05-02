@@ -1,16 +1,16 @@
 import './NavStyles.css';
-// import { GiShoppingCart } from "react-icons/gi";
 import { AiOutlineHome } from "react-icons/ai";
 import { BsDatabaseFillAdd } from "react-icons/bs";
 import { MdHistory } from "react-icons/md";
 import { IoIosLogOut } from "react-icons/io";
-import { NavLink, useHistory } from 'react-router-dom';
+import { NavLink, useHistory,useLocation } from 'react-router-dom';
 import { useState } from 'react';
+import { NavHashLink } from 'react-router-hash-link';
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
     
-    
+    const location =useLocation()
     const history = useHistory();
     const handleSignOut = () => {
 
@@ -23,8 +23,16 @@ const Navbar = () => {
                 <img src="https://juniorssupermarket.com/wp-content/uploads/2022/12/Carreta.png" alt="not" />
                 <h1>SmartSuperMarket</h1>
             </NavLink>
-            
-            
+                {location.pathname === "/SmartSuper-Market/Home" && (
+                <div className='homeF'>
+                    <NavHashLink to="/SmartSuper-Market/Home#welcome">Home</NavHashLink>
+                    <NavHashLink to="/SmartSuper-Market/Home#products">Products</NavHashLink>
+                    <NavHashLink to="/SmartSuper-Market/Home#Data">Data</NavHashLink>
+
+                </div>
+            )}
+    
+
             <div className="menu" onClick={() => setMenuOpen(!menuOpen)}>
                 <span></span>
                 <span></span>
@@ -32,9 +40,14 @@ const Navbar = () => {
             </div>
             <div className="links">
                 <ul className={menuOpen ? "open" : ""}>
-                    <li><NavLink to="/SmartSuper-Market/Home">
-                        <AiOutlineHome/>
-                    </NavLink></li>
+                    {location.pathname !== "/SmartSuper-Market/Home" && (
+                        <li>
+                            <NavLink to="/SmartSuper-Market/Home">
+                                <AiOutlineHome/>
+                            </NavLink>
+                        </li>
+                    )}
+                    
                     <li><NavLink to="/SmartSuper-Market/AddProduct">
                         <BsDatabaseFillAdd  />
                     </NavLink></li>

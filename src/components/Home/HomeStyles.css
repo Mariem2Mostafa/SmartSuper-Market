@@ -1,8 +1,4 @@
 /* Home"View Products" */
-/*View Products*/
-
-    
-
 
 
 .welcomimg {
@@ -144,3 +140,14 @@
     .search input {
             width: 400px;}
 }
+
+
+#Data{
+    margin-bottom: 100px;
+}
+
+#products {
+    margin-bottom: 100px;
+}
+
+
