@@ -4,7 +4,7 @@ import { db } from '../firebase';
 
 const useFetch = (collectionName) => {
     const [data, setData] = useState([]);
-    const [loading, setLoading] = useState(true);
+    const [isPending, setIsPending] = useState(true);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -14,10 +14,10 @@ const useFetch = (collectionName) => {
                 const querySnapshot = await getDocs(collectionRef);
                 const documents = querySnapshot.docs.map(doc => ({ id: doc.id, ...doc.data() }));
                 setData(documents);
-                setLoading(false);
+                setIsPending(false);
                 setError(null);
             } catch (error) {
-                setLoading(false);
+                setIsPending(false);
                 setError(error.message);
                 console.error(error);
                 setData([]); // Reset data to an empty array on error
@@ -27,7 +27,7 @@ const useFetch = (collectionName) => {
         fetchData();
     }, [collectionName]);
 
-    return { data, loading, error };
+    return { data, isPending, error };
 };
 
 export default useFetch;

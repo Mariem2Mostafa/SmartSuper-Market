@@ -9,6 +9,7 @@ import Navbar from './components/Navbar/Navbar'
 import NotFound from './components/NotFound'
 import ProductDetails from './components/productDetails/ProductDetails';
 import UpdateProduct from './components/UpdateProduct/UpdateProduct';
+import OrderDetails from './components/History/OrderDetails/OrderDetails';
 
 
 const App = () => {
@@ -37,8 +38,9 @@ const App = () => {
               <Route exact path="/SmartSuper-Market/History">
                 <History/>
               </Route>
-              
-              
+              <Route exact path="/SmartSuper-Market/History/:orderId">
+                  <OrderDetails />
+              </Route>
               <Route exact path="*">
                 <NotFound/>
               </Route>
@@ -51,3 +53,4 @@ const App = () => {
 }
 
 export default App;
+

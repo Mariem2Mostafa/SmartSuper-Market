@@ -5,6 +5,7 @@ import {doc, setDoc} from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 const AddProduct = () => {
+    // const [product_ID,setproduct_ID] = useState("")
     const [product_name, setProduct_name] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
@@ -30,8 +31,8 @@ const AddProduct = () => {
     const handleAddProducts = (e) => {
     e.preventDefault();
     setIsPending(true);
+const uniqueProductID = Math.floor(Math.random() * 100000).toString();
 
-    const uniqueProductID = Math.floor(Math.random() * 100000).toString();
 
     const storageRef = ref(storage, `productsImages/${image.name}`);
     const uploadTask = uploadBytesResumable(storageRef, image);
@@ -50,9 +51,9 @@ const AddProduct = () => {
         () => {
             getDownloadURL(uploadTask.snapshot.ref)
                 .then(async (imgeURL) => {
-                    const productDocRef = doc(db, 'Products', uniqueProductID);
+                    const productDocRef = doc(db, 'Products',uniqueProductID);
                     await setDoc(productDocRef, {
-                        product_ID: uniqueProductID,
+                        product_ID:uniqueProductID,
                         product_name,
                         description,
                         price:Number(price),
@@ -60,6 +61,7 @@ const AddProduct = () => {
                         url: imgeURL
                     });
                     setSuccessMsg('Product Added Successfully');
+                    // setproduct_ID('')
                     setProduct_name('');
                     setPrice('');
                     setDescription('');
@@ -84,6 +86,14 @@ const AddProduct = () => {
                 <div className="success-msg">{successMsg}</div>
             }
             <form onSubmit={handleAddProducts}>
+                {/* <label>Product_ID : </label>
+                <input
+                    type="text"
+                    className="input"
+                    required
+                    value={product_ID}
+                    onChange={(e) => setproduct_ID(e.target.value)}
+                /> */}
                 <label>Product_Name : </label>
                 <input
                     type="text"

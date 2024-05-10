@@ -10,11 +10,11 @@
     background-position: center;
     padding-top: 20rem;
     padding-bottom: 20rem;
-    
+
 }
 
 
-.caption{
+.caption {
     text-align: center;
     margin-right: 120px;
     font-weight: bold;
@@ -27,63 +27,57 @@
 #products {
     margin-top: 50px;
 }
+
 .text {
     text-align: center;
-    text-shadow: 2px 2px 5px #898686;    color: #8a35f1;
+    text-shadow: 2px 2px 5px #898686;
+    color: #8a35f1;
     font-size: 75px;
     font-weight: bold;
     margin-bottom: 30px;
     margin-top: 15px;
 
-        
+
 }
 
-.search {
-    
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        margin-top: 20px;
-        margin-bottom: 50px;
-}
 .search form {
-    background-color: none;
-    border-radius: 25px;
-    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    border-radius: 40px;
+    border: 2px solid #000000;
+    background-color: #fff;
+    max-width: 700px;
+    min-width: 150px;
+    margin: 0 auto;
+    
 }
 
 .search input {
-    width: 700px;
-    padding: 10px 30px 10px 30px;
-    border-radius: 30px;
-    font-size: 1em;
-    margin-bottom: 50px;
-    margin-top: 15px;
-    display: block;
+    flex: 1;
+    padding: 10px ;
+    margin-left: 12px;
+    border: none;
+    outline: none;
     font-size: 25px;
 }
 
-.search form input:focus {
-    outline: none;
-
-}
-
-.search form button {
-    position: absolute;
-    top: 0;
-    right: 5px;
-    width: 50px;
-    margin-top: 32px;
-    border-radius: 50%;
-    cursor: pointer;
+.search button {
+    top:0;
+    padding: 5px 10px;
+    color: #000000;
+    background: none;
     border: none;
     font-size: 25px;
-    background: none;
+    cursor: pointer;
 }
 
+.search button:hover {
+    color: #8a35f1;
+}
 
 .products-container {
-    
+
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -133,21 +127,22 @@
     margin-top: 10px;
     color: black;
 }
+
 .product-price {
     color: black;
 }
-@media (max-width: 500px){
+
+@media (max-width: 500px) {
     .search input {
-            width: 400px;}
+        width: 400px;
+    }
 }
 
 
-#Data{
+#Data {
     margin-bottom: 100px;
 }
 
 #products {
     margin-bottom: 100px;
 }
-
-

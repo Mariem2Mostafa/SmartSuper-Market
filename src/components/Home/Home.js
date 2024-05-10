@@ -5,50 +5,16 @@ import { Link } from "react-router-dom";
 import { IoSearch } from "react-icons/io5";
 import { useState } from 'react';
 import { useEffect } from 'react';
+import FetchDailyOrders from '../FetchDailyOrders';
 
 const Home = () => {
     const { error, isPending, data: products } = useFetch('Products');
-    const { data } = useFetch('history');
-    
+    const {orders ,calculateTotalPrice,data} = FetchDailyOrders()
     const [search, setSearch] = useState("");
     const [filteredProducts, setFilteredProducts] = useState([]);
 
-    //data
-    const [addedProducts, setAddedProducts] = useState([]);
-
-    const findProductById = (productId) => {
-        return products.find(product => product.id === productId);
-    };
     
-    useEffect(() => {
-        if (data && data.length > 0) {
-            const newProducts = [];
-            data.forEach(order => {
-                if (order.productsId && order.productsId.length > 0) {
-                    order.productsId.forEach(product => {
-                        const existingProductIndex = newProducts.findIndex(p => p.productId === product.productId);
-                        if (existingProductIndex !== -1) {
-                            newProducts[existingProductIndex].quantity += product.quantity;
-                        } else {
-                            const foundProduct = findProductById(product.productId);
-                            if (foundProduct) {
-                                newProducts.push({ productId: product.productId, quantity: product.quantity ,date: order.date});
-                            }
-                        }
-                    });
-                }
-            });
-            setAddedProducts(newProducts);
-        }
-    }, [data, products]);
 
-    const calculateTotalPrice = (product, quantity) => {
-        const foundProduct = findProductById(product.productId);
-        if (!foundProduct) {
-            return 0;
-        }
-        return parseFloat(foundProduct.price) * parseFloat(quantity);
-    };
     
 
     // search
@@ -86,10 +52,11 @@ const Home = () => {
                             placeholder="Search"
                             value={search}
                             onChange={handleSearch}
-                        />
-                        <button><IoSearch/></button>
+                        /><button><IoSearch/></button>
                     </form>
                 </div>
+
+                
                 <div className="products-container">
                     {filteredProducts.map((product) => (
                         <div className="Product" key={product.id}>
@@ -109,39 +76,40 @@ const Home = () => {
             <section id='Data'>
                 <div>
                     <div className="text">Sales database</div>
-                    {data?.length > 0  ? (
+                <div>
+                    {data && data.length > 0 && (
                         <table className='table'>
                             <thead>
                                 <tr>
-                                    <th style={{ textAlign: "center" }}>NO.</th>
-                                    <th style={{ textAlign: "center" }}>Product ID</th>
-                                    <th style={{ textAlign: "center" }}>Product Name</th>
-                                    <th style={{ textAlign: "center" }}>Quantity</th>
-                                    <th style={{ textAlign: "center" }}>Price</th>
-                                    <th style={{ textAlign: "center" }}>Date/Time</th>
+                                    <th style={{textAlign:"center"}}>Date</th>
+                                    <th style={{textAlign:"center"}}>Product ID</th>
+                                    <th style={{textAlign:"center"}}>Product Name</th>
+                                    <th style={{textAlign:"center"}}>Price</th>
+                                    <th style={{textAlign:"center"}}>Quantity</th>
+                                    <th style={{textAlign:"center"}}>Total Price</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {addedProducts.map((product, index) => {
-                                    const totalPrice = calculateTotalPrice(product, product.quantity);
-                                    return (
-                                        <tr key={index}>
-                                            <td style={{ textAlign: "center" }}>{index +1}</td>
-                                            <td style={{ textAlign: "center" }}>{product.productId}</td>
-                                            <td style={{ textAlign: "center" }}>{findProductById(product.productId).product_name}</td>
-                                            <td style={{ textAlign: "center" }}>{product.quantity}</td>
-                                            <td style={{ textAlign: "center" }}>{totalPrice.toFixed(2)} EGP</td>
-                                            <td style={{ textAlign: "center" }}>{product.date}</td>
-                                        </tr>
-                                    );
-                                })}
+                                {data.map((day) => (
+                                    orders[day.id] && Object.values(orders[day.id]).map(order => (
+                                        order.productId && (
+                                            <tr key={order.productId}>
+                                                <td style={{textAlign:"center"}}>{day.id}</td>
+                                                <td style={{textAlign:"center"}}>{order.productId}</td>
+                                                <td style={{textAlign:"center"}}>{products.find(p => p.id === order.productId)?.product_name}</td>
+                                                <td style={{textAlign:"center"}}>{products.find(p => p.id === order.productId)?.price.toFixed(2)} EGP</td>
+                                                <td style={{textAlign:"center"}}>{order.quantity}</td>
+                                                <td style={{textAlign:"center"}}>{calculateTotalPrice(order, order.quantity, products).toFixed(2)} EGP</td>
+                                            </tr>
+                                        )
+                                    ))
+                                ))}
                             </tbody>
                         </table>
-                    ) : (
-                        <div>No data available</div>
                     )}
                 </div>
-            </section>
+            </div>
+        </section>
 
 
         </div>
