@@ -13,11 +13,13 @@
     float: left;
     width: 250px;
     height: 250px;
+    
 }
 
 .image img {
     width: 100%;
     height: 100%;
+    padding: 0 20px 0 10px;
 }
 
 .details {
@@ -61,9 +63,12 @@
     background-color: #6b247c;
 }
 
-@media(max-width: 500px) {
+@media(max-width: 600px) {
     .product-Details {
         margin: auto;
+        display: flex;
+        justify-content: center;
+            align-items: center;
     }
 
     .image {

@@ -4,7 +4,7 @@ import useFetch from "../useFetch";
 import { db } from "../../firebase";
 import { deleteDoc, doc } from 'firebase/firestore';
 import { useHistory} from "react-router-dom";
-
+import Swal from 'sweetalert2';
 const ProductDetails = () => {
     const history = useHistory();
     const { id } = useParams();
@@ -15,12 +15,24 @@ const ProductDetails = () => {
 
     const handleDelete = async (id) => {
         try {
-        
-        const deleteVal = doc(db, "Products", id);
-        await deleteDoc(deleteVal);
-        history.push("/SmartSuper-Market/Home");
+            const confirmBox = await Swal.fire({
+            title: 'Are you sure?',
+            text: 'You will not be able to recover this order!',
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            reverseButtons: true
+            });
+            if (confirmBox.isConfirmed) { 
+                const deleteVal = doc(db, "Products", id);
+                await deleteDoc(deleteVal);
+            Swal.fire('Deleted!',
+                'Your order has been deleted.', 'success');
+                history.push("/SmartSuper-Market/Home");
+            }
     } catch (error) {
-        console.error("Error deleting product:", error);
+            console.error("Error deleting product:", error);
+            Swal.fire("Error : ",error)
     }
 };
     const handlePass = async (id) => {
@@ -45,12 +57,9 @@ const ProductDetails = () => {
                         <span className="quantity">Quantity : {product.quantity}</span> <br /><br />
                         <Link className='linkUpdate' to={`/SmartSuper-Market/update/${product.id}`}
                             onClick={() => handlePass(product.id)}>Update</Link>
-                        <button onClick={() => { 
-                            const confirmBox = window.confirm("Are you sure you want to delete this product?")
-                            if (confirmBox === true) {
+                        <button onClick={() => 
                                 handleDelete(product.id)
-                            }
-                        }}>Delete</button>
+                            }>Delete</button>
                         
                     </div>
                 </article>
