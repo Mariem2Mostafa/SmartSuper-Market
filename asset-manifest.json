@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/SmartSuper-Market/static/css/main.94e7effc.css",
-    "main.js": "/SmartSuper-Market/static/js/main.63c72692.js",
+    "main.css": "/SmartSuper-Market/static/css/main.02a64f94.css",
+    "main.js": "/SmartSuper-Market/static/js/main.2e7400d5.js",
     "static/media/img.jpeg": "/SmartSuper-Market/static/media/img.5da4487fc6156f33b08f.jpeg",
     "index.html": "/SmartSuper-Market/index.html",
-    "main.94e7effc.css.map": "/SmartSuper-Market/static/css/main.94e7effc.css.map",
-    "main.63c72692.js.map": "/SmartSuper-Market/static/js/main.63c72692.js.map"
+    "main.02a64f94.css.map": "/SmartSuper-Market/static/css/main.02a64f94.css.map",
+    "main.2e7400d5.js.map": "/SmartSuper-Market/static/js/main.2e7400d5.js.map"
   },
   "entrypoints": [
-    "static/css/main.94e7effc.css",
-    "static/js/main.63c72692.js"
+    "static/css/main.02a64f94.css",
+    "static/js/main.2e7400d5.js"
   ]
 }
