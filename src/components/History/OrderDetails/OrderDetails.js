@@ -23,7 +23,7 @@ const OrderDetails = ({ orderId, setOrderDetailsId }) => {
     try {
         const confirmBox = await Swal.fire({
             title: 'Are you sure?',
-            text: 'You will not be able to recover this product!',
+            text: 'You will not be able to recover this product from order!',
             showCancelButton: true,
             confirmButtonColor: "#3085d6",
             cancelButtonColor: "#d33",

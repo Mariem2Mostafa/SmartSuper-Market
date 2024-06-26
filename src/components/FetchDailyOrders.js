@@ -45,7 +45,7 @@ const FetchDailyOrders = () => {
                 }
             })).then(() => {
                 setOrders(ordersData);
-                console.log(ordersData)
+                // console.log(ordersData)
             });
         }
     }, [data, products]);

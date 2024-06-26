@@ -14,9 +14,6 @@ const Home = () => {
     const [filteredProducts, setFilteredProducts] = useState([]);
 
     
-
-    
-
     // search
     useEffect(() => {
         setFilteredProducts(products.filter((product) =>
@@ -44,6 +41,7 @@ const Home = () => {
 
             {/* sec2 */}
             <section id='products' >
+                
                 <div className="text">Products</div>
                 <div className="search">
                     <form onSubmit={(e) => e.preventDefault()}>

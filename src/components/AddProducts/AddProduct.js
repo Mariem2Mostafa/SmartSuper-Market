@@ -68,7 +68,7 @@ const uniqueProductID = Math.floor(Math.random() * 100000).toString();
                     setQuantity('');
                     setImage(null);
                     setIsPending(false);
-                    setTimeout(() => setSuccessMsg(''), 3000);
+                    setTimeout(() => setSuccessMsg(''), 5000);
                 })
                 .catch(err => {
                     setError(err.message);

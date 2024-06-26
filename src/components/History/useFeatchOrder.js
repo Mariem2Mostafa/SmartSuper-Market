@@ -20,7 +20,8 @@ const useFetchOrder = () => {
                     const ordersData = subCollectionSnapshot.docs.map(subDoc => ({
                         id: subDoc.id,
                         ...subDoc.data()
-                    }));
+                    }))
+                    .filter(order => order.productsId && order.productsId.length > 0);
                     fetchedOrders.push(...ordersData);
                 }
                 setOrders(fetchedOrders);
