@@ -13,7 +13,6 @@ const UpdateProduct = () => {
     const {data: products } = useFetch('Products');
     const product = products && products.find(product => product.id === id);
     
-    const [product_ID,setproduct_ID] = useState("")
     const [product_name, setProduct_name] = useState("");
     const [description, setDescription] = useState("");
     const [price, setPrice] = useState("");
@@ -23,7 +22,6 @@ const UpdateProduct = () => {
     
     useEffect(() => {
         if (product) {
-            setproduct_ID(product.product_ID || "");
             setProduct_name(product.product_name || "");
             setDescription(product.description || "");
             setPrice(product.price || "");
@@ -40,7 +38,6 @@ const UpdateProduct = () => {
             try {
                 const updateProductRef = doc(db, "Products", id);
                 await updateDoc(updateProductRef, {
-                    product_ID,
                     product_name,
                     description,
                     price: Number(price),
@@ -65,14 +62,7 @@ const UpdateProduct = () => {
             <h2>Update Product</h2>
             
             <form >
-                <label>Product ID : </label>
-                <input
-                    type="text"
-                    className="input"
-                    
-                    value={product_ID}
-                    onChange={(e) => setproduct_ID(e.target.value)}
-                />
+                
                 <label>Product Name : </label>
                 <input
                     type="text"
