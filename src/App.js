@@ -17,13 +17,13 @@ const App = () => {
     <Router>
       <div className="content">
         <Switch>
-          <Route exact path="/SmartSuper-Market">
+          <Route exact path="/">
             <Login/>
           </Route>
           <Route>
             <Navbar />
             <Switch>
-              <Route exact path="/SmartSuper-Market/Home">
+              <Route exact path="/SmartSuper-Market">
                 <Home/>
               </Route>
               <Route exact path="/SmartSuper-Market/AddProduct">
