@@ -43,17 +43,7 @@
     border-radius: 4px;
     cursor: pointer;
 }
-.clear button{
-        background: #8a35f1;
-        color: #fff;
-        border: none;
-        outline: none;
-        padding: 8px;
-        text-align: center;
-        border-radius: 8px;
-        font-size: 17px;
-        cursor: pointer;
-}
+
 
 .inputSearch button:hover {
     background-color: #6b247c;
