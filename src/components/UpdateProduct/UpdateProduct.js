@@ -44,14 +44,14 @@ const UpdateProduct = () => {
                     quantity: Number(quantity),
                 });
                 console.log("Product updated successfully");
-                history.push(`/SmartSuper-Market/Home/${product.id}/`);
+                history.push(`/SmartSuper-Market/${product.id}/`);
             } catch (err) {
                 console.error(err);
                 setError("Failed to update product.");
             }
     }
     const handleCancel = async (e) => {
-        history.push(`/SmartSuper-Market/Home/${product.id}/`);
+        history.push(`/SmartSuper-Market/${product.id}/`);
     }
     
 

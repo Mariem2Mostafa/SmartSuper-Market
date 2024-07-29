@@ -58,7 +58,7 @@ const Home = () => {
                 <div className="products-container">
                     {filteredProducts.map((product) => (
                         <div className="Product" key={product.id}>
-                            <Link className="product-view" to={`/SmartSuper-Market/Home/${product.id}/`}>
+                            <Link className="product-view" to={`/SmartSuper-Market/${product.id}/`}>
                                 <div className="product-img">
                                     <img src={product.url} alt="product-img" />
                                 </div>

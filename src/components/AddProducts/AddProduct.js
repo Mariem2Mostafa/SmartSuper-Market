@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { storage, db } from "../../firebase";
 import {doc, setDoc} from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
-
 const AddProduct = () => {
     // const [product_ID,setproduct_ID] = useState("")
     const [product_name, setProduct_name] = useState("");
