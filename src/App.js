@@ -29,7 +29,7 @@ const App = () => {
               <Route exact path="/SmartSuper-Market/AddProduct">
                 <AddProduct/>
               </Route>
-              <Route exact path="/SmartSuper-Market/Home/:id">
+              <Route exact path="/SmartSuper-Market/:id">
               <ProductDetails/>
               </Route>
               <Route exact path="/SmartSuper-Market/update/:id">
