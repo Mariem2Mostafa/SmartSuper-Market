@@ -23,7 +23,7 @@ const Login = () => {
 
             if (!snapshot1.empty || !snapshot2.empty) {
                 console.log('Login is Done..');
-                history.push('/SmartSuper-Market/Home');
+                history.push('/SmartSuper-Market');
             } else {
                 setErrorMsg('Check Your Username or Password.');
             }

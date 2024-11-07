@@ -19,15 +19,15 @@ const Navbar = () => {
 
     return (
         <nav className='nav'>
-            <NavLink to="/SmartSuper-Market/Home" className="log">
+            <NavLink to="/SmartSuper-Market" className="log">
                 <img src="https://juniorssupermarket.com/wp-content/uploads/2022/12/Carreta.png" alt="not" />
                 <h1>SmartSuperMarket</h1>
             </NavLink>
-                {location.pathname === "/SmartSuper-Market/Home" && (
+                {location.pathname === "/SmartSuper-Market" && (
                 <div className='homeF'>
-                    <NavHashLink to="/SmartSuper-Market/Home#welcome">Home</NavHashLink>
-                    <NavHashLink to="/SmartSuper-Market/Home#products">Products</NavHashLink>
-                    <NavHashLink to="/SmartSuper-Market/Home#Data">Data</NavHashLink>
+                    <NavHashLink to="/SmartSuper-Market#welcome">Home</NavHashLink>
+                    <NavHashLink to="/SmartSuper-Market#products">Products</NavHashLink>
+                    <NavHashLink to="/SmartSuper-Market#Data">Data</NavHashLink>
 
                 </div>
             )}
@@ -40,9 +40,9 @@ const Navbar = () => {
             </div>
             <div className="links">
                 <ul className={menuOpen ? "open" : ""}>
-                    {location.pathname !== "/SmartSuper-Market/Home" && (
+                    {location.pathname !== "/SmartSuper-Market" && (
                         <li>
-                            <NavLink to="/SmartSuper-Market/Home">
+                            <NavLink to="/SmartSuper-Market">
                                 <AiOutlineHome/>
                             </NavLink>
                         </li>
