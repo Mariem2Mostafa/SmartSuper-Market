@@ -28,7 +28,7 @@ const ProductDetails = () => {
                 await deleteDoc(deleteVal);
             Swal.fire('Deleted!',
                 'Your order has been deleted.', 'success');
-                history.push("/SmartSuper-Market/Home");
+                history.push("/SmartSuper-Market");
             }
     } catch (error) {
             console.error("Error deleting product:", error);
