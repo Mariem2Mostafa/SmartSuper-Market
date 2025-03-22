@@ -1,15 +1,14 @@
 {
   "files": {
-    "main.css": "/SmartSuper-Market/static/css/main.6da6c23b.css",
-    "main.js": "/SmartSuper-Market/static/js/main.d70cc6e9.js",
-    "static/media/img.jpeg": "/SmartSuper-Market/static/media/img.5da4487fc6156f33b08f.jpeg",
-    "static/media/R.jpg": "/SmartSuper-Market/static/media/R.f152db7a1d492bb6f362.jpg",
-    "index.html": "/SmartSuper-Market/index.html",
-    "main.6da6c23b.css.map": "/SmartSuper-Market/static/css/main.6da6c23b.css.map",
-    "main.d70cc6e9.js.map": "/SmartSuper-Market/static/js/main.d70cc6e9.js.map"
+    "main.css": "/SmartSuper-Market/Home/static/css/main.e1df670b.css",
+    "main.js": "/SmartSuper-Market/Home/static/js/main.af5b9e1d.js",
+    "static/media/img.jpeg": "/SmartSuper-Market/Home/static/media/img.5da4487fc6156f33b08f.jpeg",
+    "index.html": "/SmartSuper-Market/Home/index.html",
+    "main.e1df670b.css.map": "/SmartSuper-Market/Home/static/css/main.e1df670b.css.map",
+    "main.af5b9e1d.js.map": "/SmartSuper-Market/Home/static/js/main.af5b9e1d.js.map"
   },
   "entrypoints": [
-    "static/css/main.6da6c23b.css",
-    "static/js/main.d70cc6e9.js"
+    "static/css/main.e1df670b.css",
+    "static/js/main.af5b9e1d.js"
   ]
 }
